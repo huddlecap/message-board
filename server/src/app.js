@@ -4,11 +4,6 @@ const authRoutes = require("./routes/authRoutes");
 const messageRoutes = require("./routes/messageRoutes");
 
 const app = express();
-const prisma = require("./prisma");
-
-prisma.$connect()
-  .then(() => console.log("Database connected successfully"))
-  .catch((e) => console.error("Database connection failed:", e));
 
 app.use(cors());
 app.use(express.json());
